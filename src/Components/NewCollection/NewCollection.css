@@ -1,27 +1,35 @@
-.popular{
+.new-collection{
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    height: 90vh;
+    /* height: 90vh; */
 }
 
-.popular h1{
+.new-collection h1{
     color: #171717;
     font-size: 50px;
     font-weight: 600 ;
 }
 
-.popular hr{
+.new-collection hr{
     width: 200px;
     height: 6px;
     border-radius: 10px;
-    background-color: #a82020;
+    background-color: #b70c0c;
 }
 
-.popular-item{
+.new-collection-item{
     margin-top: 30px;
     display: flex;
     gap: 30px;
+}
+
+.collections{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 50px;
+    gap: 33px;
 }
