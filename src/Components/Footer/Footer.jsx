@@ -19,8 +19,8 @@ const Footer = () => {
         <li>Company</li>
         <li>Product</li>
         <li>Offices</li>
-        <li>Aout</li>
-        <li>Aout</li>
+        <li>About</li>
+        <li>Contact</li>
       </ul>
       <div className="footer-social-icon">
         <div className="footer-icon-container">
