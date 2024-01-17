@@ -28,6 +28,7 @@
 .loginsignup-fields input {
     height: 72px;
     width: 100%;
+    border-radius: 20px;
     padding-left: 20px;
     border: 1px solid #c9c9c9;
     outline: none;
@@ -39,6 +40,7 @@
     width: 600px;
     height: 72px;
     color: white;
+    border-radius: 20px;
     background: #ff4141;
     margin-top: 30px;
     border: none;
