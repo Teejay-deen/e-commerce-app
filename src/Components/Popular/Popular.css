@@ -8,6 +8,7 @@
 }
 
 .popular h1{
+    margin-top: 20px;
     color: #171717;
     font-size: 50px;
     font-weight: 600 ;
@@ -16,6 +17,7 @@
 .popular hr{
     width: 200px;
     height: 6px;
+    font-weight: 500;
     border-radius: 10px;
     background-color: #a82020;
 }
