@@ -1,9 +1,24 @@
 import React, { useState } from "react";
 import "./CSS/LoginSignUp.css";
 import { useNavigate  } from 'react-router-dom';
+import axios from "axios";
 
 const LoginSignup = () => {
   const navigate = useNavigate ();
+
+  const [userName, setUserName] = useState("")
+  const [userPassword, setUserPassword] = useState("")
+  const [userEmail, setUserEmail] = useState("")
+
+
+  const submitUserLogin = async ()=>{
+    axios.get("http://localhost:8000/auth/login")
+    .then(res => {
+      console.log(res)
+    }).catch(err =>{
+      console.log(err)
+    })
+  }
   return (
     <form
       method="post"
@@ -28,6 +43,8 @@ const LoginSignup = () => {
             name="text"
             id="nameId"
             placeholder="Your name"
+            value={userName}
+            onChange={(e)=>setUserName(e.target.value)}
             autoFocus={true}
           />
           <input
@@ -35,12 +52,16 @@ const LoginSignup = () => {
             name="email"
             id="emailId"
             placeholder="Your Email"
+            value={userEmail}
+            onChange={(e)=> setUserEmail(e.target.value)}
           />
           <input
             type="password"
             name="password"
             id="passId"
             placeholder="Your Pasword"
+            value={userPassword}
+            onChange={(e)=> setUserPassword(e.target.value)}
           />
         </div>
         <button type="submit" onClick={()=> navigate("/HomePage")}>Continue</button>

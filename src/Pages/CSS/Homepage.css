@@ -64,4 +64,14 @@
 
 .home-screen header a{
     text-decoration: none;
+    cursor: pointer;
+    color: #007d;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.home-screen header h3{
+    text-decoration: none;
+    color: #007d;
+    text-transform: uppercase;
 }
