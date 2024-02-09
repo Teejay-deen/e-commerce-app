@@ -10,6 +10,7 @@ import Footer from "./Components/Footer/Footer";
 import women_banner from "./Components/Assets/banner_women.png"
 import kid_banner from "./Components/Assets/banner_kids.png"
 import MenItem from "./Pages/men";
+import HomePage from "./Pages/HomePage";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           </Route>
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Login" element={<LoginSignup />} />
+          <Route path="/HomePage" element={<HomePage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
