@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./CSS/LoginSignUp.css";
+import { useNavigate  } from 'react-router-dom';
 
 const LoginSignup = () => {
+  const navigate = useNavigate ();
   return (
     <form
       method="post"
@@ -41,7 +43,7 @@ const LoginSignup = () => {
             placeholder="Your Pasword"
           />
         </div>
-        <button type="submit">Continue</button>
+        <button type="submit" onClick={()=> navigate("/HomePage")}>Continue</button>
         <p className="loginsignup-login">
           Already have an account <span>Login Here!</span>
         </p>

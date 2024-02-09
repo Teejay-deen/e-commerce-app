@@ -5,10 +5,10 @@ import user_avatar from "../Components/Assets/user-avatar.jpg";
 const HomePage = () => {
   return (
     <div className='home-screen'>
-        {/* <header>
+        <header>
             <h3>System name</h3>
             <a href="#">Logout</a>
-        </header> */}
+        </header>
 
 
         <div className="page-content">
@@ -17,17 +17,17 @@ const HomePage = () => {
                 <h3>User Full Name</h3>
                 <div className="user-meta">
                     <p>
-                        <span>Username</span>
+                        <span>Username: </span>
                         <span>Test Username</span>
                     </p>
 
                     <p>
-                        <span>Email</span>
+                        <span>Email:</span>
                         <span>test@gmail.com</span>
                     </p>
 
                     <p>
-                        <span>Gender</span>
+                        <span>Gender:</span>
                         <span>Male or Female</span>
                     </p>
                 </div>
