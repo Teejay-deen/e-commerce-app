@@ -1,13 +1,16 @@
 import React from 'react'
 import "./CSS/Homepage.css";
 import user_avatar from "../Components/Assets/user-avatar.jpg";
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+
+    const Logout = useNavigate();
   return (
     <div className='home-screen'>
         <header>
-            <h3>System name</h3>
-            <a href="#">Logout</a>
+            <h3>Login details</h3>
+            <a onClick={()=>Logout("/")}>Logout</a>
         </header>
 
 
