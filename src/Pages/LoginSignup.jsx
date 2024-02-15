@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./CSS/LoginSignUp.css";
 import { useNavigate  } from 'react-router-dom';
-import axios from "axios";
+import axios, { Axios } from "axios";
 
 const LoginSignup = () => {
   const navigate = useNavigate ();
@@ -12,12 +12,23 @@ const LoginSignup = () => {
 
 
   const submitUserLogin = async ()=>{
-    axios.get("http://localhost:8000/auth/login")
-    .then(res => {
-      console.log(res)
-    }).catch(err =>{
-      console.log(err)
-    })
+    try{
+      const reqBody = {
+        "username": userName,
+        "password":userPassword,
+        "email":userEmail
+      }
+      const response = await axios.post("https://dummyjson.com/auth/login", reqBody );
+      if (response) {
+        console.log(response)
+      }
+    }
+    catch (e) {
+
+    }
+    finally{
+
+    }
   }
   return (
     <form
@@ -64,7 +75,7 @@ const LoginSignup = () => {
             onChange={(e)=> setUserPassword(e.target.value)}
           />
         </div>
-        <button type="submit" onClick={()=> navigate("/HomePage")}>Continue</button>
+        <button type="submit" onClick={submitUserLogin}>Continue</button>
         <p className="loginsignup-login">
           Already have an account <span>Login Here!</span>
         </p>
