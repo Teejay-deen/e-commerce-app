@@ -22,6 +22,8 @@ const NewCollection = () => {
           );
         })}
       </div>
+
+      <div></div>
     </div>
   );
 };
